@@ -7,7 +7,7 @@
 
 #### 我为什么要用PowerShell把malware kill重新制作一遍?
 - 原作者因为时间关系不能维护更新.
-- 我恨这些软件.
+- 我恨流氓软件.
 
 #### 对于恶意软件分类:
 1. 未经用户许可擅自安装并自动（开机）修改或增添额外服务（service）或进程（process）的叫流氓软件（rogueware）。
@@ -25,6 +25,8 @@
 - Kill-Malware.ps1 主脚本
 - Restore-Status.ps1 恢复脚本
 - 两个.ps1脚本为GBK编码(PowerShell输出中文真蛋疼),除此之外UTF-8. 
+
+#### 欢迎各种Pr,对抗malware,我需要你的帮助!
 
 
 ## 用法:
