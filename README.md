@@ -5,7 +5,7 @@
 ## 说明:
 #### 感谢 原作者leave 
 
-#### 我为什么要用PowerShell把malware kill重新制作一遍?
+#### 我为什么要用PowerShell把malware-kill重新制作一遍?
 - 原作者因为时间关系不能维护更新.
 - 我恨流氓软件.
 
