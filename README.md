@@ -8,6 +8,7 @@
 #### 我为什么要用PowerShell把malware-kill重新制作一遍?
 - 原作者因为时间关系不能维护更新.
 - 我恨流氓软件.
+- PowerShell是第一个版本,exe傻瓜版正在制作中.
 
 #### 对于恶意软件分类:
 1. 未经用户许可擅自安装并自动（开机）修改或增添额外服务（service）或进程（process）的叫流氓软件（rogueware）。
