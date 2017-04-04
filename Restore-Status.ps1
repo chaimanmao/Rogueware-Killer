@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS  
-let malwares invade your PC now. →_→
+let rogueware invade your PC now. →_→
 
 .DESCRIPTION
 if you regret it ,  run this script . 
@@ -14,7 +14,7 @@ date:  2017/3/1
 
 .LINK
 source project:https://liwei2.com/2015/11/27/378.html
-latest project:https://github.com/vizogood/Kill-Malware
+latest project:https://github.com/vizogood/Rogueware-Killer
 #>
 
 # check for permissions
@@ -94,7 +94,7 @@ cacls "$programx86\Rising\Rav" /E /G Everyone:F
 Remove-Item "$programx86\Rising" -Recurse
 
 Write-Host "`n"
-Write-Host "已解除malware系列软件的目录权限..." -ForegroundColor Green
+Write-Host "已解除流氓软件的目录权限..." -ForegroundColor Green
 
 # unblock IP and URLs
 "127.0.0.1 localhost" | Out-File "C:\Windows\System32\drivers\etc\hosts" -Force
@@ -107,5 +107,5 @@ Write-Host "`n"
 Write-Host "已解除证书限制" -ForegroundColor Green
 
 Write-Host "`n"
-Write-Host "全部恢复! 按下任意键退出" -ForegroundColor Green
+Write-Host "全部恢复! 请小心流氓全家桶! 按下任意键退出" -ForegroundColor Green
 [Console]::Readkey() | Out-Null ;

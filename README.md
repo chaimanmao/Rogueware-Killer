@@ -25,7 +25,7 @@
 - malware-kill.zip->存放源版本(使用Bat编写)文件.
 - Cer目录->存放流氓软件的所有证书.
 - latestBlockhosts.txt->存放需要屏蔽的域名→hosts格式
-- Kill-Malware.ps1->主脚本
+- Kill-Rogueware.ps1->主脚本
 - Restore-Status.ps1->恢复脚本
 - 两个.ps1脚本为GBK编码(PowerShell输出中文真蛋疼),除此之外UTF-8. 
 - 火绒拦截全家桶规则目录->存放火绒拦截全家桶规则.json->火绒安全软件配置文件
@@ -43,7 +43,7 @@
 ```
 - 在PowerShell窗口中执行此脚本:
 ```Shell
-    .\Kill-malware.ps1
+    .\Kill-Rogueware.ps1
 ```
 
 - 如果影响到了你的正常使用,执行恢复脚本:

@@ -7,7 +7,7 @@ run this script will lead your PC to unable to smoothly install the some malware
 if you mind , don't run it . 
 
 .EXAMPLE
-.\Kill-Malware.ps1 (runas admin)
+.\Kill-Rogueware.ps1 (runas admin)
 
 .NOTES
 author:Vizo
@@ -15,7 +15,7 @@ date:  2017/2/28
 
 .LINK
 source project:https://liwei2.com/2015/11/27/378.html
-latest project:https://github.com/vizogood/Kill-Malware
+latest project:https://github.com/vizogood/Rogueware-Killer
 #>
 
 # check for permissions 
@@ -96,7 +96,7 @@ Write-Host "已屏蔽Cer目录下的所有证书..." -ForegroundColor Green
 
 # set directory permissions
 Write-Host "`n"
-Write-Host "正在屏蔽malware系列软件的目录权限..." -ForegroundColor Green
+Write-Host "正在屏蔽流氓软件的目录权限..." -ForegroundColor Green
 # Baidu 
 New-Item "$program\Baidu\BaiduAn"    -ItemType Directory
 New-Item "$program\Baidu\BaiduSd"    -ItemType Directory
@@ -161,7 +161,7 @@ cacls "$program\Rising" /e /d Everyone
 cacls "$programx86\Rising\Rav" /e /d Everyone
 cacls "$programx86\Rising" /e /d Everyone
 Write-Host "`n"
-Write-Host "已设置权限" -ForegroundColor Green
+Write-Host "已设置权限,让流氓软件们滚出你的电脑!" -ForegroundColor Green
 
 # block IP and URLs
 Get-content "$PSScriptRoot\latestBlockhosts.txt" | Add-content "C:\Windows\System32\drivers\etc\hosts" -Force
