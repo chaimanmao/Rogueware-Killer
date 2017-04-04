@@ -59,9 +59,9 @@
 - 打开[火绒安全软件](http://www.huorong.cn/)->软件设置->系统防御->自定义防护->导入->选择"火绒拦截全家桶规则.json"即可.
 
 ## 开源协议:
-- 火绒拦截全家桶规则:http://bbs.huorong.cn/thread-12380-1-1.html
-- malware-kil BAT脚本作者[leave](https://liwei2.com/) 
-- hosts来源:https://github.com/vokins/yhosts & 自己添加
+- 火绒拦截全家桶规则->http://bbs.huorong.cn/thread-12380-1-1.html
+- malware-kil BAT脚本作者->[leave](https://liwei2.com/) 
+- hosts来源->https://github.com/vokins/yhosts & 自己添加
 - PowerShell源文件->MIT
 
 
