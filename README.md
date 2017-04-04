@@ -43,14 +43,18 @@
 ```Shell
     .\Kill-malware.ps1
 ```
+
 - 如果影响到了你的正常使用,执行恢复脚本:
 ```Shell
     .\Restore-Status.ps1
 ```
+
 - 如果不想拉黑某个证书,比如CNNIC,在执行主脚本前到Cer目录下删除cnnic.cer即可.
 
+- 目录下 火绒拦截全家桶规则.json 为[火绒安全软件](http://www.huorong.cn/)的定制规则,个人推荐. 
 ## 开源协议:
 - malware-kil作者[leave](https://liwei2.com/) 
 - hosts来源:https://github.com/vokins/yhosts & 自己添加
 - malware-kill文件夹以外的所有源文件的遵循MIT
+- 火绒拦截全家桶规则:http://bbs.huorong.cn/thread-12380-1-1.html
 
