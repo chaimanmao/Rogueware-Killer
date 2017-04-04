@@ -1,14 +1,16 @@
-# 中文版:
 ## 名称:
-- [流氓软件终结者](https://liwei2.com/2015/11/27/378.html)的PowerShell重制版
+- [流氓软件终结者](https://liwei2.com/2015/11/27/378.html)
+- 收集一切终结流氓软件的方法
 
 ## 说明:
 #### 感谢 原作者leave 
 
-#### 我为什么要用PowerShell把malware-kill重新制作一遍?
-- 原作者因为时间关系不能维护更新.
+#### 我为什么要把流氓软件终结者重新制作一遍?
+- 当前为PowerShell制作,exe傻瓜版正在制作中.
 - 我恨流氓软件.
-- PowerShell是第一个版本,exe傻瓜版正在制作中.
+- 原作者因为时间关系不能维护更新.
+
+
 
 #### 对于恶意软件分类:
 1. 未经用户许可擅自安装并自动（开机）修改或增添额外服务（service）或进程（process）的叫流氓软件（rogueware）。
@@ -20,17 +22,17 @@
 
 
 #### 目录介绍:
-- malware-kill.zip 存放源版本(使用Bat编写)文件.
-- Cer目录 存放流氓软件的所有证书.
-- latestBlockhosts.txt 存放需要屏蔽的域名→hosts格式
-- Kill-Malware.ps1 主脚本
-- Restore-Status.ps1 恢复脚本
+- malware-kill.zip->存放源版本(使用Bat编写)文件.
+- Cer目录->存放流氓软件的所有证书.
+- latestBlockhosts.txt->存放需要屏蔽的域名→hosts格式
+- Kill-Malware.ps1->主脚本
+- Restore-Status.ps1->恢复脚本
 - 两个.ps1脚本为GBK编码(PowerShell输出中文真蛋疼),除此之外UTF-8. 
+- 火绒拦截全家桶规则目录->存放火绒拦截全家桶规则.json->火绒安全软件配置文件
 
-#### 欢迎各种Pr,对抗malware,我需要你的帮助!
 
+## PowerShell脚本用法:
 
-## 用法:
 - Windows系统默认不能执行Powershell脚本,第一次运行Powershell脚本需要做如下操作:
 ```powershell
     Set-ExecutionPolicy   UnRestricted  # 把脚本权限设置为最低
@@ -51,10 +53,15 @@
 
 - 如果不想拉黑某个证书,比如CNNIC,在执行主脚本前到Cer目录下删除cnnic.cer即可.
 
-- 目录下 火绒拦截全家桶规则.json 为[火绒安全软件](http://www.huorong.cn/)的定制规则,个人推荐. 
+
+## 火绒安全软件规则用法:
+
+- 打开[火绒安全软件](http://www.huorong.cn/)->软件设置->系统防御->自定义防护->导入->选择"火绒拦截全家桶规则.json"即可.
+
 ## 开源协议:
-- malware-kil作者[leave](https://liwei2.com/) 
-- hosts来源:https://github.com/vokins/yhosts & 自己添加
-- malware-kill文件夹以外的所有源文件的遵循MIT
 - 火绒拦截全家桶规则:http://bbs.huorong.cn/thread-12380-1-1.html
+- malware-kil BAT脚本作者[leave](https://liwei2.com/) 
+- hosts来源:https://github.com/vokins/yhosts & 自己添加
+- PowerShell源文件->MIT
+
 
