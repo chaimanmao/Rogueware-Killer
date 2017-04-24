@@ -1,9 +1,9 @@
 <#
 .SYNOPSIS  
-let rogueware invade your PC now. →_→
+let rogueware invade your PC now.
 
 .DESCRIPTION
-if you regret it ,  run this script . 
+if you regret it , run this script . 
 
 .EXAMPLE
 .\Restore-Status.ps1 (runas admin)
@@ -94,18 +94,18 @@ cacls "$programx86\Rising\Rav" /E /G Everyone:F
 Remove-Item "$programx86\Rising" -Recurse
 
 Write-Host "`n"
-Write-Host "已解除流氓软件的目录权限..." -ForegroundColor Green
+Write-Host "remove directory  permissions limit successfully " -ForegroundColor Green
 
 # unblock IP and URLs
 "127.0.0.1 localhost" | Out-File "C:\Windows\System32\drivers\etc\hosts" -Force
 Write-Host "`n"
-Write-Host "已恢复Hosts" -ForegroundColor Green
+Write-Host "restore hosts successfully" -ForegroundColor Green
 
 # clear untrusted certificates
 Remove-Item  "HKCU:Software\Microsoft\SystemCertificates\Disallowed\Certificates" -Recurse
 Write-Host "`n"
-Write-Host "已解除证书限制" -ForegroundColor Green
+Write-Host "remove certificates limit successfully" -ForegroundColor Green
 
 Write-Host "`n"
-Write-Host "全部恢复! 请小心流氓全家桶! 按下任意键退出" -ForegroundColor Green
+Write-Host "all done ! " -ForegroundColor Green
 [Console]::Readkey() | Out-Null ;

@@ -29,25 +29,25 @@ if( -not $currentWp.IsInRole([Security.Principal.WindowsBuiltInRole]::Administra
     Start-Process "$psHome\powershell.exe"   -ArgumentList "$currentFile $fullPara" -verb runas
     return
 }
-Write-Host "按下任意键开始." -ForegroundColor Red -BackgroundColor White
+Write-Host "any key to continue" -ForegroundColor Red -BackgroundColor White
 [Console]::Readkey() | Out-Null ;
 
 write-Host "
-                 -------流氓软件终结者-------
+                 -------锟斤拷氓锟斤拷锟斤拷锟秸斤拷锟斤拷-------
    -----------------------------------------------------------
-   │      百度杀毒    │　   百度卫士   │   百度浏览器     │
+   锟斤拷      锟劫讹拷杀锟斤拷    锟斤拷锟斤拷   锟劫讹拷锟斤拷士   锟斤拷   锟劫讹拷锟斤拷锟斤拷锟斤拷     锟斤拷
    -----------------------------------------------------------
-   │   百度手机助手    │　 360安全卫士 │     360杀毒      │
+   锟斤拷   锟劫讹拷锟街伙拷锟斤拷锟斤拷    锟斤拷锟斤拷 360锟斤拷全锟斤拷士 锟斤拷     360杀锟斤拷      锟斤拷
    -----------------------------------------------------------
-   │   QQ电脑管家     │　   瑞星杀毒   │  瑞星出品垃圾软件 │
+   锟斤拷   QQ锟斤拷锟皆管硷拷     锟斤拷锟斤拷   锟斤拷锟斤拷杀锟斤拷   锟斤拷  锟斤拷锟角筹拷品锟斤拷锟斤拷锟斤拷锟斤拷 锟斤拷
    -----------------------------------------------------------
-   │      金山毒霸    │   金山手机助手 │  金山出品垃圾软件 │
+   锟斤拷      锟斤拷山锟斤拷锟斤拷    锟斤拷   锟斤拷山锟街伙拷锟斤拷锟斤拷 锟斤拷  锟斤拷山锟斤拷品锟斤拷锟斤拷锟斤拷锟斤拷 锟斤拷
    -----------------------------------------------------------
-   │    猎豹浏览器    │　   金山卫士   │       迅雷       │
+   锟斤拷    锟皆憋拷锟斤拷锟斤拷锟斤拷    锟斤拷锟斤拷   锟斤拷山锟斤拷士   锟斤拷       迅锟斤拷       锟斤拷
    -----------------------------------------------------------
-   │  迅雷网游加速器  │　  迅雷游戏盒子 │     迅雷影音     │
+   锟斤拷  迅锟斤拷锟斤拷锟轿硷拷锟斤拷锟斤拷  锟斤拷锟斤拷  迅锟斤拷锟斤拷戏锟斤拷锟斤拷 锟斤拷     迅锟斤拷影锟斤拷     锟斤拷
    -----------------------------------------------------------
-                       输入C查看 CNNIC简介
+                       锟斤拷锟斤拷C锟介看 CNNIC锟斤拷锟斤拷
    -----------------------------------------------------------
                        Powered by  Vizo
    
@@ -55,48 +55,39 @@ write-Host "
    -----------------------------------------------------------             
 " -ForegroundColor Green
 
-$isUserWantToSeeCNNIC = Read-Host "输入C查看CNNIC介绍,回车或输入其它继续:"
+$isUserWantToSeeCNNIC = Read-Host "锟斤拷锟斤拷C锟介看CNNIC锟斤拷锟斤拷,锟截筹拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷:"
 if ($isUserWantToSeeCNNIC -eq "C"){
     Write-Host "
-                CNNIC是中国互联网络信息中心
-                2015年，因CNNIC发行的一个中级CA被发现发行了Google域名的假证书
-                而且曾有人利用自签名的CNNIC证书对GitHub进行中间人攻击
-                并被指攻击来源很可能与防火长城有关
-                许多用户选择不信任CNNIC颁发的数字证书
-                并引起对CNNIC滥用证书颁发权力的担忧
-                2015年4月2日，Google宣布不再承认CNNIC所颁发的电子证书
-                4月4日，继Google之后，Mozilla也宣布不再承认CNNIC所颁发的电子证书
-                2016年8月，CNNIC官方网站已放弃自行发行的根证书，改用由DigiCert颁发的证书
-                来自Wikipedia " -ForegroundColor Yellow 
+                CNNIC锟斤拷锟叫癸拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷息锟斤拷锟斤拷
+                2015锟疥，锟斤拷CNNIC锟斤拷锟叫碉拷一锟斤拷锟叫硷拷CA锟斤拷锟斤拷锟街凤拷锟斤拷锟斤拷Google锟斤拷锟斤拷锟侥硷拷证锟斤拷
+                锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷签锟斤拷锟斤拷CNNIC证锟斤拷锟斤拷GitHub锟斤拷锟斤拷锟叫硷拷锟剿癸拷锟斤拷
+                锟斤拷锟斤拷指锟斤拷锟斤拷锟斤拷源锟杰匡拷锟斤拷锟斤拷锟斤拷锟金长筹拷锟叫癸拷
+                锟斤拷锟斤拷锟矫伙拷选锟斤拷锟斤拷锟斤拷锟斤拷CNNIC锟戒发锟斤拷锟斤拷锟斤拷证锟斤拷
+                锟斤拷锟斤拷锟斤拷锟斤拷CNNIC锟斤拷锟斤拷证锟斤拷锟戒发权锟斤拷锟侥碉拷锟斤拷
+                2015锟斤拷4锟斤拷2锟秸ｏ拷Google锟斤拷锟斤拷锟斤拷锟劫筹拷锟斤拷CNNIC锟斤拷锟戒发锟侥碉拷锟斤拷证锟斤拷
+                4锟斤拷4锟秸ｏ拷锟斤拷Google之锟斤拷锟斤拷Mozilla也锟斤拷锟斤拷锟斤拷锟劫筹拷锟斤拷CNNIC锟斤拷锟戒发锟侥碉拷锟斤拷证锟斤拷
+                2016锟斤拷8锟铰ｏ拷CNNIC锟劫凤拷锟斤拷站锟窖凤拷锟斤拷锟斤拷锟叫凤拷锟叫的革拷证锟介，锟斤拷锟斤拷锟斤拷DigiCert锟戒发锟斤拷证锟斤拷
+                锟斤拷锟斤拷Wikipedia " -ForegroundColor Yellow 
 }
 Write-Host "`n"
-Write-Host "按下任意键开始." -ForegroundColor "Red"
+Write-Host "锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷始." -ForegroundColor "Red"
 [Console]::Readkey() | Out-Null ;
 
 $PSScriptRoot
 $program = "C:\Program Files"
 $programx86 = "C:\Program Files (x86)"
 $appdata = Get-Childitem env:APPDATA | %{ $_.Value } 
-<# firstly I write so stupid
-$fileList = Get-ChildItem "$PSScriptRoot\CA\"  *.cer | %{$_.Name} | Out-File "$PSScriptRoot\CAlisttmp.txt"
-$lineNum =  (Get-Content "$PSScriptRoot\CAlisttmp.txt").Length
-for($i=0;$i -lt $lineNum;$i++){
-    $currentLineName=(Get-Content "$PSScriptRoot\CAlisttmp.txt" -TotalCount $lineNum)[-($lineNum)+$i]
-    certutil -f -addstore -user “Disallowed” "$PSScriptRoot\CA\$currentLineName"
-}
-Remove-Item "$PSScriptRoot\CAlisttmp.txt" -Force
-#>
 
 # block digital certificate
 ForEach($file in Dir "$PSScriptRoot\Cer"){
-    certutil -f -addstore -user “Disallowed” "$PSScriptRoot\Cer\$file"
+    certutil -f -addstore -user "Disallowed" "$PSScriptRoot\Cer\$file"
 }
 Write-Host "`n"
-Write-Host "已屏蔽Cer目录下的所有证书..." -ForegroundColor Green
+Write-Host "set Certificates limit successfully " -ForegroundColor Green
 
 # set directory permissions
 Write-Host "`n"
-Write-Host "正在屏蔽流氓软件的目录权限..." -ForegroundColor Green
+Write-Host "setting directory permission limit" -ForegroundColor Green
 # Baidu 
 New-Item "$program\Baidu\BaiduAn"    -ItemType Directory
 New-Item "$program\Baidu\BaiduSd"    -ItemType Directory
@@ -161,15 +152,15 @@ cacls "$program\Rising" /e /d Everyone
 cacls "$programx86\Rising\Rav" /e /d Everyone
 cacls "$programx86\Rising" /e /d Everyone
 Write-Host "`n"
-Write-Host "已设置权限,让流氓软件们滚出你的电脑!" -ForegroundColor Green
+Write-Host "set directory permission limit successfully" -ForegroundColor Green
 
 # block IP and URLs
 Get-content "$PSScriptRoot\latestBlockhosts.txt" | Add-content "C:\Windows\System32\drivers\etc\hosts" -Force
 Write-Host "`n"
-Write-Host "已拉黑下载地址" -ForegroundColor Green
+Write-Host "set hosts successfully" -ForegroundColor Green
 
 Write-Host "`n"
-Write-Host "全部完成,按下任意键退出" -ForegroundColor Yellow
+Write-Host "all done!" -ForegroundColor Yellow
 [Console]::Readkey() | Out-Null ;
 
 

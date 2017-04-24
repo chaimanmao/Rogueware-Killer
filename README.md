@@ -27,7 +27,7 @@
 - latestBlockhosts.txt->存放需要屏蔽的域名→hosts格式
 - Kill-Rogueware.ps1->主脚本
 - Restore-Status.ps1->恢复脚本
-- 两个.ps1脚本为GBK编码(PowerShell输出中文真蛋疼),除此之外UTF-8.
+- →_→因为windows powershell 控制台gbk编码的原因,脚本内全部使用英文(感谢必应词典和谷歌翻译大力赞助)
 - 火绒拦截全家桶规则目录->存放火绒拦截全家桶规则.json->火绒安全软件配置文件
 
 
