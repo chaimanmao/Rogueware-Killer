@@ -60,6 +60,6 @@
 
 ## 开源协议:
 - 火绒拦截全家桶规则->http://bbs.huorong.cn/thread-12380-1-1.html
-- malware-kil BAT脚本作者->[leave](https://liwei2.com/)
-- hosts来源->https://github.com/vokins/yhosts & 自己添加
-- PowerShell源文件->MIT
+- malware-kil BAT version->[leave](https://liwei2.com/)
+- hosts source->https://github.com/vokins/yhosts & made by myself
+- All source codes and files, if not specially excluded, are licensed under [MIT](https://opensource.org/licenses/MIT).
