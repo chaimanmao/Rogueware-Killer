@@ -62,4 +62,4 @@
 - 火绒拦截全家桶规则->http://bbs.huorong.cn/thread-12380-1-1.html
 - malware-kil BAT version->[leave](https://liwei2.com/)
 - hosts source->https://github.com/vokins/yhosts & made by myself
-- All source codes and files, if not specially excluded, are licensed under [THE Sprite-WARE LICENSE](https://github.com/vizogood/Rogueware-Killer/blob/master/LICENSE).
+- 所有源文件和源代码, 如果没有特殊声明, 都遵循 [雪碧软件协议](https://github.com/vizogood/Rogueware-Killer/blob/master/LICENSE).
