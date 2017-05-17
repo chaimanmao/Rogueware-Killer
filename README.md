@@ -61,5 +61,5 @@
 ## 开源协议:
 - 火绒拦截全家桶规则->http://bbs.huorong.cn/thread-12380-1-1.html
 - malware-kil BAT version->[leave](https://liwei2.com/)
-- hosts source->https://github.com/vokins/yhosts & made by myself
+- hosts 来源->https://github.com/vokins/yhosts & 自己添加
 - 所有源文件和源代码, 如果没有特殊声明, 都遵循 [雪碧软件协议](https://github.com/vizogood/Rogueware-Killer/blob/master/LICENSE).
