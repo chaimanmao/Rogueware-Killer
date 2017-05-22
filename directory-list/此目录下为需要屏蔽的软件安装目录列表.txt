@@ -1,0 +1,3 @@
+$program = "C:\Program Files"
+$programx86 = "C:\Program Files (x86)"
+$appdata = Get-Childitem env:APPDATA | % { $_.Value } 

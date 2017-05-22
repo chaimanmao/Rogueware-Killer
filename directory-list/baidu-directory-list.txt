@@ -1,0 +1,5 @@
+$program\Baidu\BaiduAn
+$program\Baidu\BaiduSd
+$appdata\Baidu
+$programx86\Baidu\BaiduAn
+$programx86\Baidu\BaiduSd

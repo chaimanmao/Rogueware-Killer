@@ -1,0 +1,4 @@
+$program\ksafe
+$program\kingsoft\kingsoft antivirus
+$programx86\ksafe
+$programx86\kingsoft\kingsoft antivirus
