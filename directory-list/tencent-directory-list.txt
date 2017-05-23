@@ -1,3 +1,3 @@
-$program\Tencent\QQPCMgr
-$appdata\Tencent\QQPCMgr
-$programx86\Tencent\QQPCMgr
+C:\Program Files\Tencent\QQPCMgr
+appData\Tencent\QQPCMgr
+C:\Program Files (x86)\Tencent\QQPCMgr

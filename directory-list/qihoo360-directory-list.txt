@@ -1,4 +1,4 @@
-$program\360\360safe
-$program\360\360sd
-$programx86\360\360safe
-$programx86\360\360sd
+C:\Program Files\360\360safe
+C:\Program Files\360\360sd
+C:\Program Files (x86)\360\360safe
+C:\Program Files (x86)\360\360sd

@@ -1,5 +1,5 @@
-$program\Baidu\BaiduAn
-$program\Baidu\BaiduSd
-$appdata\Baidu
-$programx86\Baidu\BaiduAn
-$programx86\Baidu\BaiduSd
+C:\Program Files\Baidu\BaiduAn
+C:\Program Files\Baidu\BaiduSd
+appData\Baidu
+C:\Program Files (x86)\Baidu\BaiduAn
+C:\Program Files (x86)\Baidu\BaiduSd

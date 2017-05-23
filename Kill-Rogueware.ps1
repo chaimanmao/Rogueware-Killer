@@ -32,10 +32,6 @@ Write-Host "any key to continue" -ForegroundColor Red -BackgroundColor White
 [Console]::Readkey() | Out-Null ;
 
 $PSScriptRoot
-$program = "C:\Program Files"
-$programx86 = "C:\Program Files (x86)"
-$appdata = Get-Childitem env:APPDATA | % { $_.Value } 
-
 #......block digital certificate........................................
 try {
     ForEach ($file in Dir "$PSScriptRoot\cer") {
@@ -43,74 +39,75 @@ try {
     }
 }catch {
     Write-Host "set Certificates limit failed ! " -ForegroundColor Red
-}Finally {
-    Write-Host "set Certificates limit successfully !  " -ForegroundColor Green
 }
 
 
-#......set directory permissions.........................................
-Write-Host "setting directory permission limit" -ForegroundColor Green
-
+#......set directory permissions........................................
+$appData = Get-Childitem env:APPDATA | % { $_.Value }
+$program ="C:\Program Files"
+$programx86="C:\Program Files"
 # baidu 
 $baidu_directory_list= New-Object System.Collections.ArrayList
-for($line=0;$line -le (Get-Content "./directory-list/baidu-directory-list.txt").Length-1 ;$line+=1){
-    $baidu_directory_list.add((Get-Content "./directory-list/baidu-directory-list.txt")[$line]) | Out-Null
+for($line=0;$line -lt (Get-Content "./directory-list/baidu-directory-list.txt").Count ;$line+=1){
+    $baidu_directory_list.add(((Get-Content "./directory-list/baidu-directory-list.txt")[$line]).replace("appData","$appData"))  | Out-Null
 }
-for($i=0;$i -le $baidu_directory_list.Count;$i+=1){
-    New-Item "$baidu_directory_list[i]"  -ItemType Directory
-    icacls.exe "$baidu_directory_list[i]" /deny Everyone:F
+for($i=0;$i -lt $baidu_directory_list.Count-1;$i+=1){
+    New-Item $baidu_directory_list[$i]  -type Directory
+    icacls.exe $baidu_directory_list[$i] /deny Everyone:F
 }
 for ($i = 1; $i -le 9; $i++ ) {
     for ($j = 0; $j -le 9; $j++ ) {
-        New-Item "$program\BaiduSd$i.$j" -ItemType Directory
-        attrib +s +h "$program\BaiduSd$i.$j"
-        icacls.exe "$program\BaiduSd$i.$j" /grant Everyone:F
+        New-Item $program\BaiduSd$i.$j -type Directory
+        attrib +s +h $program\BaiduSd$i.$j
+        icacls.exe $program\BaiduSd$i.$j /grant Everyone:F
     }
 }
 for ($i = 1; $i -le 9; $i++ ) {
     for ($j = 0; $j -le 9; $j++ ) {
-        New-Item "$programx86\BaiduSd$i.$j" -ItemType Directory
-        attrib +s +h "$programx86\BaiduSd$i.$j"
-        icacls.exe "$programx86\BaiduSd$i.$j" /grant Everyone:F
+        New-Item $programx86\BaiduSd$i.$j -type Directory
+        attrib +s +h $programx86\BaiduSd$i.$j
+        icacls.exe $programx86\BaiduSd$i.$j /grant Everyone:F
     }
 }
+
 # qiHoo 360
 $qihoo360_directory_list= New-Object System.Collections.ArrayList
-for($line=0;$line -le (Get-Content "./directory-list/qihoo360-directory-list.txt").Length-1 ;$line+=1){
-    $qihoo360_directory_list.add((Get-Content "./directory-list/qihoo360-directory-list.txt")[$line]) | Out-Null
+for($line=0;$line -lt (Get-Content "./directory-list/qihoo360-directory-list.txt").Count ;$line+=1){
+    $qihoo360_directory_list.add(((Get-Content "./directory-list/qihoo360-directory-list.txt")[$line]).replace("appData","$appData"))  | Out-Null
 }
-for($i=0;$i -le $qihoo360_directory_list.Count;$i+=1){
-    New-Item "$qihoo360_directory_list[i]"  -ItemType Directory
-    icacls.exe "$qihoo360irectoryList[i]" /deny Everyone:F
+for($i=0;$i -lt $qihoo360_directory_list.Count-1;$i+=1){
+    New-Item $qihoo360_directory_list[$i]  -type Directory
+    icacls.exe $qihoo360_directory_list[$i] /deny Everyone:F
 }
 # kingsoft
 $kingsoft_directory_list= New-Object System.Collections.ArrayList
-for($line=0;$line -le (Get-Content "./directory-list/kingsoft-directory-list.txt").Length-1 ;$line+=1){
-    $kingsoft_directory_list.add((Get-Content "./directory-list/kingsoft-directory-list.txt")[$line]) | Out-Null
+for($line=0;$line -lt (Get-Content "./directory-list/kingsoft-directory-list.txt").Count ;$line+=1){
+    $kingsoft_directory_list.add(((Get-Content "./directory-list/kingsoft-directory-list.txt")[$line]).replace("appData","$appData"))  | Out-Null
 }
-for($i=0;$i -le $kingsoft_directory_list.Count;$i+=1){
-    New-Item "$kingsoft_directory_list[i]"  -ItemType Directory
-    icacls.exe "$kingsoft_directory_list[i]" /deny Everyone:F
+for($i=0;$i -lt $kingsoft_directory_list.Count-1;$i+=1){
+    New-Item $kingsoft_directory_list[$i]  -type Directory
+    icacls.exe $kingsoft_directory_list[$i] /deny Everyone:F
 }
 # tencent 
-$tecent_directory_list= New-Object System.Collections.ArrayList
-for($line=0;$line -le (Get-Content "./directory-list/tecent-directory-list.txt").Length-1 ;$line+=1){
-    $tecent_directory_list.add((Get-Content "./directory-list/tecent-directory-list.txt")[$line]) | Out-Null
+$tencent_directory_list= New-Object System.Collections.ArrayList
+for($line=0;$line -lt (Get-Content "./directory-list/tecent-directory-list.txt").Count ;$line+=1){
+    $tencent_directory_list.add(((Get-Content "./directory-list/tecent-directory-list.txt")[$line]).replace("appData","$appData"))  | Out-Null
 }
-for($i=0;$i -le $tecent_directory_list.Count;$i+=1){
-    New-Item "$tecent_directory_list[i]"  -ItemType Directory
-    icacls.exe "$tecent_directory_list[i]" /deny Everyone:F
+for($i=0;$i -lt $tencent_directory_list.Count-1;$i+=1){
+    New-Item $tencent_directory_list[$i]  -type Directory
+    icacls.exe $tencent_directory_list[$i] /deny Everyone:F
 }
 # rising
 $rising_directory_list= New-Object System.Collections.ArrayList
-for($line=0;$line -le (Get-Content "./directory-list/rising-directory-list.txt").Length-1 ;$line+=1){
-    $rising_directory_list.add((Get-Content "./directory-list/rising-directory-list.txt")[$line]) | Out-Null
+for($line=0;$line -lt (Get-Content "./directory-list/rising-directory-list.txt").Count ;$line+=1){
+    $rising_directory_list.add(((Get-Content "./directory-list/rising-directory-list.txt")[$line]).replace("appData","$appData"))  | Out-Null
 }
-for($i=0;$i -le $rising_directory_list.Count;$i+=1){
-    New-Item "$rising_directory_list[i]"  -ItemType Directory
-    icacls.exe "$rising_directory_list[i]" /deny Everyone:F
+for($i=0;$i -lt $rising_directory_list.Count-1;$i+=1){
+    New-Item $rising_directory_list[$i]  -type Directory
+    icacls.exe $rising_directory_list[$i] /deny Everyone:F
 }
 Write-Host "set directory permission limit successfully" -ForegroundColor Green
+Write-Host "\n"
 
 
 
@@ -121,6 +118,7 @@ try{
     Write-Host "set hosts failed ! " -ForegroundColor Red
 }Finally{
     Write-Host "set hosts successfully" -ForegroundColor Green
+    Write-Host "\n"
 }
 
 Write-Host "all done!" -ForegroundColor Yellow

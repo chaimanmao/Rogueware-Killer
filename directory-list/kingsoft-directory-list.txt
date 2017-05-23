@@ -1,4 +1,4 @@
-$program\ksafe
-$program\kingsoft\kingsoft antivirus
-$programx86\ksafe
-$programx86\kingsoft\kingsoft antivirus
+C:\Program Files\ksafe
+C:\Program Files\kingsoft\kingsoft antivirus
+C:\Program Files (x86)\ksafe
+C:\Program Files (x86)\kingsoft\kingsoft antivirus
