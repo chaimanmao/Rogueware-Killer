@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS  
-let rogueware invade your PC now.
+let rogueware invade your PC now →_→
 
 .DESCRIPTION
 if you regret it , run this script . 
@@ -17,7 +17,7 @@ source project:https://liwei2.com/2015/11/27/378.html
 latest project:https://github.com/vizogood/Rogueware-Killer
 #>
 
-# check for permissions
+#......check for permissions...........................................
 $currentWi = [Security.Principal.WindowsIdentity]::GetCurrent()
 $currentWp = [Security.Principal.WindowsPrincipal]$currentWi
 if( -not $currentWp.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)){
@@ -34,8 +34,8 @@ $program = "C:\Program Files"
 $programx86 = "C:\Program Files (x86)"
 $appdata = Get-Childitem env:APPDATA | %{ $_.Value } 
 
-# set directory permissions
-# unblock Baidu
+#......set directory permissions.........................................
+# baidu
 cacls "$program\Baidu\BaiduAn" /E /G Everyone:F
 cacls "$program\Baidu\BaiduSd" /E /G Everyone:F
 Remove-Item "$program\Baidu" -Recurse
@@ -59,7 +59,7 @@ for($i = 1;$i -le 9;$i++ ){
      }
 }
 
-# unblock QiHoo 360
+# qiHoo 360
 cacls "$program\360\360safe" /E /G Everyone:F
 cacls "$program\360\360sd" /E /G Everyone:F
 Remove-Item "$program\360" -Recurse
@@ -67,7 +67,7 @@ cacls "%ProgramFiles(x86)%\360\360safe" /E /G Everyone:F
 cacls "%ProgramFiles(x86)%\360\360sd" /E /G Everyone:F
 Remove-Item "$programx86\360" -Recurse
 
-# Kingsoft
+# kingsoft
 cacls "$program\ksafe" /E /G Everyone:F
 Remove-Item "$program\ksafe" -Recurse
 cacls "$program\kingsoft\kingsoft antivirus" /E /G Everyone:F
@@ -77,7 +77,7 @@ Remove-Item "$programx86\ksafe" -Recurse
 cacls "$programx86\kingsoft\kingsoft antivirus" /E /G Everyone:F
 Remove-Item "$programx86\kingsoft" -Recurse
 
-# Tencent
+# tencent
 cacls "$program\Tencent\QQPCMgr" /E /G Everyone:F
 Remove-Item "$program\Tencent" -Recurse
 cacls "$appdata\Tencent\QQPCMgr" /E /G Everyone:F
@@ -85,7 +85,7 @@ Remove-Item "$appdata\Tencent" -Recurse
 cacls "$programx86\Tencent\QQPCMgr" /E /G Everyone:F
 Remove-Item "$programx86\Tencent" -Recurse
 
-# Rising
+# rising
 cacls "$program\Rising" /E /G Everyone:F
 cacls "$program\Rising\Rav" /E /G Everyone:F
 Remove-Item "$program\Rising" -Recurse
@@ -96,7 +96,8 @@ Remove-Item "$programx86\Rising" -Recurse
 Write-Host "`n"
 Write-Host "remove directory  permissions limit successfully " -ForegroundColor Green
 
-# unblock IP and URLs
+
+#......unblock IP and URLs...................................
 "127.0.0.1 localhost" | Out-File "C:\Windows\System32\drivers\etc\hosts" -Force
 Write-Host "`n"
 Write-Host "restore hosts successfully" -ForegroundColor Green

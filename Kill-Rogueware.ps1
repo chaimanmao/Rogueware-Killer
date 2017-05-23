@@ -4,7 +4,6 @@ all malware go to hell!
 
 .DESCRIPTION
 run this script will lead your PC to unable to smoothly install the some malwares 
-if you mind , don't run it . 
 
 .EXAMPLE
 .\Kill-Rogueware.ps1 (runas admin)
@@ -18,7 +17,7 @@ source project:https://liwei2.com/2015/11/27/378.html
 latest project:https://github.com/vizogood/Rogueware-Killer
 #>
 
-# check for permissions 
+#......check for permissions............................................ 
 $currentWi = [Security.Principal.WindowsIdentity]::GetCurrent()
 $currentWp = [Security.Principal.WindowsPrincipal]$currentWi
 if ( -not $currentWp.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
@@ -37,7 +36,7 @@ $program = "C:\Program Files"
 $programx86 = "C:\Program Files (x86)"
 $appdata = Get-Childitem env:APPDATA | % { $_.Value } 
 
-# block digital certificate
+#......block digital certificate........................................
 try {
     ForEach ($file in Dir "$PSScriptRoot\cer") {
         certutil -f -addstore -user "Disallowed" "$PSScriptRoot\Cer\$file"
@@ -48,30 +47,19 @@ try {
     Write-Host "set Certificates limit successfully !  " -ForegroundColor Green
 }
 
-# set directory permissions
+
+#......set directory permissions.........................................
 Write-Host "setting directory permission limit" -ForegroundColor Green
 
-# Baidu 
-$baiduDirectoryList= New-Object System.Collections.ArrayList
+# baidu 
+$baidu_directory_list= New-Object System.Collections.ArrayList
 for($line=0;$line -le (Get-Content "./directory-list/baidu-directory-list.txt").Length-1 ;$line+=1){
-    $baiduDirectoryList.add((Get-Content "./directory-list/baidu-directory-list.txt")[$line]) | Out-Null
+    $baidu_directory_list.add((Get-Content "./directory-list/baidu-directory-list.txt")[$line]) | Out-Null
 }
-
-for($i=0;$i -le $baiduDirectoryList.Count;$i+=1){
-    New-Item "$baiduDirectoryList[i]"  -ItemType Directory
-    icacls.exe "$baiduDirectoryList[i]" /deny Everyone:F
+for($i=0;$i -le $baidu_directory_list.Count;$i+=1){
+    New-Item "$baidu_directory_list[i]"  -ItemType Directory
+    icacls.exe "$baidu_directory_list[i]" /deny Everyone:F
 }
-
-New-Item "$program\Baidu\BaiduAn"    -ItemType Directory
-New-Item "$program\Baidu\BaiduSd"    -ItemType Directory
-New-Item "$appdata\Baidu"            -ItemType Directory
-New-Item "$programx86\Baidu\BaiduAn" -ItemType Directory
-New-Item "$programx86\Baidu\BaiduSd" -ItemType Directory
-icacls.exe "$program\Baidu\BaiduAn" /deny Everyone:F
-icacls.exe "$program\Baidu\BaiduSd" /deny Everyone:F
-icacls.exe "$appdata\Baidu" /deny Everyone:F
-icacls.exe "$programx86\Baidu\BaiduAn" /deny Everyone:F
-icacls.exe "$programx86\Baidu\BaiduSd" /deny Everyone:F
 for ($i = 1; $i -le 9; $i++ ) {
     for ($j = 0; $j -le 9; $j++ ) {
         New-Item "$program\BaiduSd$i.$j" -ItemType Directory
@@ -86,62 +74,54 @@ for ($i = 1; $i -le 9; $i++ ) {
         icacls.exe "$programx86\BaiduSd$i.$j" /grant Everyone:F
     }
 }
-
-
-
-
-# QiHoo 360d
-New-Item "$program\360\360safe" -ItemType Directory
-New-Item "$program\360\360sd" -ItemType Directory
-New-Item "$programx86\360\360safe" -ItemType Directory
-New-Item "$programx86\360\360sd" -ItemType Directory
-icacls.exe "$program\360\360safe" /deny Everyone:F
-icacls.exe "$program\360\360sd" /deny Everyone:F
-icacls.exe "$programx86\360\360safe" /grant Everyone:F
-icacls.exe "$programx86\360\360sd" /grant Everyone:F
-
-# Kingsoft
-New-Item "$program\ksafe" -ItemType Directory
-New-Item "$program\kingsoft\kingsoft antivirus" -ItemType Directory
-New-Item "$programx86\ksafe" -ItemType Directory
-New-Item "$programx86\kingsoft\kingsoft antivirus" -ItemType Directory
-icacls.exe "$program\ksafe" /grant Everyone:F
-icacls.exe "$program\kingsoft\kingsoft antivirus" /grant Everyone:F
-icacls.exe "$programx86\ksafe" /grant Everyone:F
-icacls.exe "$programx86\kingsoft\kingsoft antivirus" /grant Everyone:F
-
-# Tencent 
-New-Item "$program\Tencent\QQPCMgr" -ItemType Directory
-New-Item "$appdata\Tencent\QQPCMgr" -ItemType Directory
-New-Item "$programx86\Tencent\QQPCMgr"  -ItemType Directory
-icacls.exe "$program\Tencent\QQPCMgr" /grant Everyone:F
-icacls.exe "$appdata\Tencent\QQPCMgr" /grant Everyone:F
-icacls.exe "$programx86\Tencent\QQPCMgr" /grant Everyone:F
-
-# Rising
-New-Item "$program\Rising" -ItemType Directory
-New-Item "$program\Rising\Rav" -ItemType Directory
-New-Item "$programx86\Rising" -ItemType Directory
-New-Item "$programx86\Rising\Rav" -ItemType Directory
-icacls.exe "$program\Rising\Rav" /grant Everyone:F
-icacls.exe "$program\Rising" /grant Everyone:F
-icacls.exe "$programx86\Rising\Rav" /grant Everyone:F
-icacls.exe "$programx86\Rising" /grant Everyone:F
-Write-Host "`n"
+# qiHoo 360
+$qihoo360_directory_list= New-Object System.Collections.ArrayList
+for($line=0;$line -le (Get-Content "./directory-list/qihoo360-directory-list.txt").Length-1 ;$line+=1){
+    $qihoo360_directory_list.add((Get-Content "./directory-list/qihoo360-directory-list.txt")[$line]) | Out-Null
+}
+for($i=0;$i -le $qihoo360_directory_list.Count;$i+=1){
+    New-Item "$qihoo360_directory_list[i]"  -ItemType Directory
+    icacls.exe "$qihoo360irectoryList[i]" /deny Everyone:F
+}
+# kingsoft
+$kingsoft_directory_list= New-Object System.Collections.ArrayList
+for($line=0;$line -le (Get-Content "./directory-list/kingsoft-directory-list.txt").Length-1 ;$line+=1){
+    $kingsoft_directory_list.add((Get-Content "./directory-list/kingsoft-directory-list.txt")[$line]) | Out-Null
+}
+for($i=0;$i -le $kingsoft_directory_list.Count;$i+=1){
+    New-Item "$kingsoft_directory_list[i]"  -ItemType Directory
+    icacls.exe "$kingsoft_directory_list[i]" /deny Everyone:F
+}
+# tencent 
+$tecent_directory_list= New-Object System.Collections.ArrayList
+for($line=0;$line -le (Get-Content "./directory-list/tecent-directory-list.txt").Length-1 ;$line+=1){
+    $tecent_directory_list.add((Get-Content "./directory-list/tecent-directory-list.txt")[$line]) | Out-Null
+}
+for($i=0;$i -le $tecent_directory_list.Count;$i+=1){
+    New-Item "$tecent_directory_list[i]"  -ItemType Directory
+    icacls.exe "$tecent_directory_list[i]" /deny Everyone:F
+}
+# rising
+$rising_directory_list= New-Object System.Collections.ArrayList
+for($line=0;$line -le (Get-Content "./directory-list/rising-directory-list.txt").Length-1 ;$line+=1){
+    $rising_directory_list.add((Get-Content "./directory-list/rising-directory-list.txt")[$line]) | Out-Null
+}
+for($i=0;$i -le $rising_directory_list.Count;$i+=1){
+    New-Item "$rising_directory_list[i]"  -ItemType Directory
+    icacls.exe "$rising_directory_list[i]" /deny Everyone:F
+}
 Write-Host "set directory permission limit successfully" -ForegroundColor Green
 
-# block IP and URLs
-Get-content "$PSScriptRoot\latest-block-hosts.txt" | Add-content "C:\Windows\System32\drivers\etc\hosts" -Force
-Write-Host "`n"
-Write-Host "set hosts successfully" -ForegroundColor Green
 
-Write-Host "`n"
+
+#......block IP and URLs...................................................
+try{
+    Get-content "$PSScriptRoot\latest-block-hosts.txt" | Add-content "C:\Windows\System32\drivers\etc\hosts" -Force
+}catch{
+    Write-Host "set hosts failed ! " -ForegroundColor Red
+}Finally{
+    Write-Host "set hosts successfully" -ForegroundColor Green
+}
+
 Write-Host "all done!" -ForegroundColor Yellow
-[Console]::Readkey() | Out-Null ;
-
-
-
-
-
-
-
+[Console]::Readkey() | Out-Null;

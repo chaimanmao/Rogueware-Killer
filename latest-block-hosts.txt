@@ -1,4 +1,4 @@
-# isKill-MalwareModifyStart
+# rogueware-modify-start
 
 @down
 #down-2345
@@ -169,5 +169,4 @@
 127.0.0.1 hd.hd.hhyhfs.com
 127.0.0.1 gi.xi.gxabj.com
 
-
-# isKill-MalwareModifyStart
+# rogueware-modify-end
