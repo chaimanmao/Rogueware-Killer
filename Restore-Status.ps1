@@ -1,20 +1,10 @@
 <#
-.SYNOPSIS  
-let rogueware invade your PC now →_→
-
-.DESCRIPTION
-if you regret it , run this script . 
-
-.EXAMPLE
-.\Restore-Status.ps1 (runas admin)
-
-.NOTES
-author:Vizo
-date:  2017/3/1
-
-.LINK
-source project:https://liwei2.com/2015/11/27/378.html
-latest project:https://github.com/vizogood/Rogueware-Killer
+  author: vizo 
+  date: 2017-05-23 20:40:39 
+  last modified by:  vizo 
+  example: .\Kill-Rogueware.ps1 (runas admin)
+  source project:https://liwei2.com/2015/11/27/378.html
+  latest project:https://github.com/vizogood/Rogueware-Killer 
 #>
 
 #......check for permissions...........................................
@@ -30,11 +20,10 @@ if( -not $currentWp.IsInRole([Security.Principal.WindowsBuiltInRole]::Administra
 }
 
 $PSScriptRoot
-$program = "C:\Program Files"
-$programx86 = "C:\Program Files (x86)"
-$appdata = Get-Childitem env:APPDATA | %{ $_.Value } 
-
 #......set directory permissions.........................................
+$appdata = Get-Childitem env:APPDATA | %{ $_.Value }
+$program = "C:\Program Files"
+$programx86 = "C:\Program Files (x86)" 
 # baidu
 cacls "$program\Baidu\BaiduAn" /E /G Everyone:F
 cacls "$program\Baidu\BaiduSd" /E /G Everyone:F

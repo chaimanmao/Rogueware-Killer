@@ -18,6 +18,9 @@
 
 > 作者：螺哥  来源：知乎  链接：https://www.zhihu.com/question/21491140/answer/18404252
 
+#### 支持平台:
+- Windows10
+
 #### 目录介绍:
 - malware-kill.zip->存放源版本(使用Bat编写)文件.
 - cer目录->存放流氓软件的所有证书.

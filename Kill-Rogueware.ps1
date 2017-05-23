@@ -1,21 +1,12 @@
 <#
-.SYNOPSIS  
-all malware go to hell!
-
-.DESCRIPTION
-run this script will lead your PC to unable to smoothly install the some malwares 
-
-.EXAMPLE
-.\Kill-Rogueware.ps1 (runas admin)
-
-.NOTES
-author:Vizo
-date:  2017/2/28
-
-.LINK
-source project:https://liwei2.com/2015/11/27/378.html
-latest project:https://github.com/vizogood/Rogueware-Killer
+  author: vizo 
+  date: 2017-05-23 20:40:39 
+  last modified by:  vizo 
+  example: .\Kill-Rogueware.ps1 (runas admin)
+  source project:https://liwei2.com/2015/11/27/378.html
+  latest project:https://github.com/vizogood/Rogueware-Killer 
 #>
+
 
 #......check for permissions............................................ 
 $currentWi = [Security.Principal.WindowsIdentity]::GetCurrent()
@@ -25,11 +16,12 @@ if ( -not $currentWp.IsInRole([Security.Principal.WindowsBuiltInRole]::Administr
             '-{0} {1}' -f $_ , $MyInvocation.BoundParameters[$_]} ) -join ' '
     $currentFile = (Resolve-Path  $MyInvocation.InvocationName).Path
     $fullPara = $boundPara + ' ' + $args -join ' '
-    Start-Process "$psHome\powershell.exe"   -ArgumentList "$currentFile $fullPara" -verb runas
+    Start-Process "$psHome\powershell.exe" -ArgumentList "$currentFile $fullPara" -verb runas
     return
 }
 Write-Host "any key to continue" -ForegroundColor Red -BackgroundColor White
 [Console]::Readkey() | Out-Null ;
+
 
 $PSScriptRoot
 #......block digital certificate........................................
@@ -45,7 +37,7 @@ try {
 #......set directory permissions........................................
 $appData = Get-Childitem env:APPDATA | % { $_.Value }
 $program ="C:\Program Files"
-$programx86="C:\Program Files"
+$programx86="C:\Program Files (x86)"
 # baidu 
 $baidu_directory_list= New-Object System.Collections.ArrayList
 for($line=0;$line -lt (Get-Content "./directory-list/baidu-directory-list.txt").Count ;$line+=1){
@@ -90,8 +82,8 @@ for($i=0;$i -lt $kingsoft_directory_list.Count-1;$i+=1){
 }
 # tencent 
 $tencent_directory_list= New-Object System.Collections.ArrayList
-for($line=0;$line -lt (Get-Content "./directory-list/tecent-directory-list.txt").Count ;$line+=1){
-    $tencent_directory_list.add(((Get-Content "./directory-list/tecent-directory-list.txt")[$line]).replace("appData","$appData"))  | Out-Null
+for($line=0;$line -lt (Get-Content "./directory-list/tencent-directory-list.txt").Count ;$line+=1){
+    $tencent_directory_list.add(((Get-Content "./directory-list/tencent-directory-list.txt")[$line]).replace("appData","$appData"))  | Out-Null
 }
 for($i=0;$i -lt $tencent_directory_list.Count-1;$i+=1){
     New-Item $tencent_directory_list[$i]  -type Directory
@@ -106,6 +98,7 @@ for($i=0;$i -lt $rising_directory_list.Count-1;$i+=1){
     New-Item $rising_directory_list[$i]  -type Directory
     icacls.exe $rising_directory_list[$i] /deny Everyone:F
 }
+
 Write-Host "set directory permission limit successfully" -ForegroundColor Green
 Write-Host "\n"
 
@@ -116,9 +109,6 @@ try{
     Get-content "$PSScriptRoot\latest-block-hosts.txt" | Add-content "C:\Windows\System32\drivers\etc\hosts" -Force
 }catch{
     Write-Host "set hosts failed ! " -ForegroundColor Red
-}Finally{
-    Write-Host "set hosts successfully" -ForegroundColor Green
-    Write-Host "\n"
 }
 
 Write-Host "all done!" -ForegroundColor Yellow
