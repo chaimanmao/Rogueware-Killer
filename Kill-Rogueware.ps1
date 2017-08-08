@@ -21,9 +21,8 @@ if ( -not $currentWp.IsInRole([Security.Principal.WindowsBuiltInRole]::Administr
 }
 Write-Host "any key to continue" -ForegroundColor Red -BackgroundColor White
 [Console]::Readkey() | Out-Null ;
-
-
 $PSScriptRoot
+
 #......block digital certificate........................................
 try {
     ForEach ($file in Dir "$PSScriptRoot\cer") {
@@ -104,7 +103,7 @@ Write-Host "\n"
 
 
 
-#......block IP and URLs...................................................
+#......block IP...................................................
 try{
     Get-content "$PSScriptRoot\latest-block-hosts.txt" | Add-content "C:\Windows\System32\drivers\etc\hosts" -Force
 }catch{

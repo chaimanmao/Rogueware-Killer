@@ -44,13 +44,12 @@
 ```PowerShell
     .\Kill-Rogueware.ps1
 ```
-
+- 如果不想拉黑某个证书,比如CNNIC,在执行主脚本前到cer目录下删除cnnic.cer即可.
+- 同理,如果想拉黑某个证书,可以把证书文件导出为.cer格式(.DER/X509)放在cer目录下运行脚本即可.
 - 如果影响到了你的正常使用,执行恢复脚本:
 ```PowerShell
     .\Restore-Status.ps1
 ```
-
-- 如果不想拉黑某个证书,比如CNNIC,在执行主脚本前到cer目录下删除cnnic.cer即可.
 
 
 ## 火绒安全软件规则用法:
@@ -60,5 +59,5 @@
 ## 开源协议:
 - 火绒拦截全家桶规则->http://bbs.huorong.cn/thread-12380-1-1.html
 - malware-kil BAT version->[leave](https://liwei2.com/)
-- hosts 来源->https://github.com/vokins/yhosts & 自己添加
+- hosts 来源参考->https://github.com/vokins/yhosts & 自己添加
 - 所有源文件和源代码, 如果没有特殊声明, 都遵循 [雪碧软件协议](https://github.com/vizogood/Rogueware-Killer/blob/master/LICENSE).
