@@ -1,6 +1,5 @@
 ## 名称:
 - [流氓软件终结者](https://liwei2.com/2015/11/27/378.html)
-- 收集终结流氓软件的方法
 
 ## 说明:
 #### 感谢 原作者leave
@@ -29,7 +28,6 @@
 - latestBlockhosts.txt->存放需要屏蔽的域名→hosts格式
 - Kill-Rogueware.ps1->主脚本
 - Restore-Status.ps1->恢复脚本
-- 火绒拦截全家桶规则目录->存放火绒拦截全家桶规则.json->火绒安全软件配置文件
 
 ## PowerShell脚本用法:
 - Windows系统默认不能执行Powershell脚本,第一次运行Powershell脚本需要做如下操作:
@@ -50,11 +48,6 @@
 ```PowerShell
     .\Restore-Status.ps1
 ```
-
-
-## 火绒安全软件规则用法:
-
-- 打开[火绒安全软件](http://www.huorong.cn/)->软件设置->系统防御->自定义防护->导入->选择"火绒拦截全家桶规则.json"即可.
 
 ## 开源协议:
 - 火绒拦截全家桶规则->http://bbs.huorong.cn/thread-12380-1-1.html

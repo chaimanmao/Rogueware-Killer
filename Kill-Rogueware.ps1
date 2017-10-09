@@ -7,7 +7,7 @@
   latest project:https://github.com/vizogood/Rogueware-Killer 
 #>
 
-
+Write-Host "If something is wrong, please create a new issue in Github" -BackgroundColor Red
 #......check for permissions............................................ 
 $currentWi = [Security.Principal.WindowsIdentity]::GetCurrent()
 $currentWp = [Security.Principal.WindowsPrincipal]$currentWi
@@ -99,7 +99,6 @@ for($i=0;$i -lt $rising_directory_list.Count-1;$i+=1){
 }
 
 Write-Host "set directory permission limit successfully" -ForegroundColor Green
-Write-Host "\n"
 
 
 
